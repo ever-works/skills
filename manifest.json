@@ -1,0 +1,124 @@
+{
+  "$schema": "./schema/skill-manifest.schema.json",
+  "version": 1,
+  "generatedBy": "manual",
+  "skills": [
+    {
+      "slug": "skill-creator",
+      "path": "skills/skill-creator",
+      "name": "Skill Creator",
+      "summary": "Create, edit, and improve Agent Skills — scaffold a SKILL.md from scratch, refine an existing skill, run evals, and optimize a skill's description for better triggering.",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "tags": ["meta", "authoring", "evals"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+      "licensePath": "skills/skill-creator/LICENSE.txt"
+    },
+    {
+      "slug": "mcp-builder",
+      "path": "skills/mcp-builder",
+      "name": "MCP Builder",
+      "summary": "Guide for building high-quality MCP (Model Context Protocol) servers with well-designed tools, in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "skillPath": "skills/mcp-builder/SKILL.md",
+      "tags": ["mcp", "integration", "tools", "backend"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+      "licensePath": "skills/mcp-builder/LICENSE.txt"
+    },
+    {
+      "slug": "webapp-testing",
+      "path": "skills/webapp-testing",
+      "name": "Webapp Testing",
+      "summary": "Interact with and test local web apps using Playwright — verify frontend behavior, debug UI, capture screenshots, and read browser logs.",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "tags": ["testing", "playwright", "frontend", "qa"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+      "licensePath": "skills/webapp-testing/LICENSE.txt"
+    },
+    {
+      "slug": "frontend-design",
+      "path": "skills/frontend-design",
+      "name": "Frontend Design",
+      "summary": "Guidance for distinctive, intentional visual design when building or reshaping UI — aesthetic direction, typography, and choices that avoid templated defaults.",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "tags": ["design", "frontend", "ui", "typography"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "licensePath": "skills/frontend-design/LICENSE.txt"
+    },
+    {
+      "slug": "brand-guidelines",
+      "path": "skills/brand-guidelines",
+      "name": "Brand Guidelines",
+      "summary": "Apply an organization's official brand colors and typography to any artifact. Resolves brand tokens from the project rather than assuming a fixed palette (adapted from the Anthropic original to be brand-agnostic).",
+      "skillPath": "skills/brand-guidelines/SKILL.md",
+      "tags": ["design", "branding", "styling", "typography"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+      "licensePath": "skills/brand-guidelines/LICENSE.txt"
+    },
+    {
+      "slug": "internal-comms",
+      "path": "skills/internal-comms",
+      "name": "Internal Comms",
+      "summary": "Write internal communications in common company formats — status reports, leadership updates, 3P updates, newsletters, FAQs, incident reports, and project updates.",
+      "skillPath": "skills/internal-comms/SKILL.md",
+      "tags": ["writing", "communications", "docs"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
+      "licensePath": "skills/internal-comms/LICENSE.txt"
+    },
+    {
+      "slug": "claude-api",
+      "path": "skills/claude-api",
+      "name": "Claude API",
+      "summary": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, and model migration.",
+      "skillPath": "skills/claude-api/SKILL.md",
+      "tags": ["llm", "api", "reference", "sdk"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
+      "licensePath": "skills/claude-api/LICENSE.txt"
+    },
+    {
+      "slug": "check-pr",
+      "path": "skills/check-pr",
+      "name": "Check PR",
+      "summary": "Check a GitHub, GitLab, or Perforce PR/MR/CL for review comments, failing checks, and PR-body gaps. Use when inspecting, fixing, or preparing a change for submission.",
+      "skillPath": "skills/check-pr/SKILL.md",
+      "tags": ["engineering", "pr", "review", "ci"],
+      "version": "1.0.0",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/paperclipai/paperclip/tree/master/.agents/skills/check-pr"
+    },
+    {
+      "slug": "pr-report",
+      "path": "skills/pr-report",
+      "name": "PR Report",
+      "summary": "Produce a maintainer-grade PR or contribution report as HTML or Markdown. Use when deeply reviewing a PR, explaining a design, comparing systems, or preparing a merge recommendation.",
+      "skillPath": "skills/pr-report/SKILL.md",
+      "tags": ["engineering", "pr", "review", "reporting"],
+      "version": "1.0.0",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/paperclipai/paperclip/tree/master/.agents/skills/pr-report"
+    },
+    {
+      "slug": "doc-maintenance",
+      "path": "skills/doc-maintenance",
+      "name": "Doc Maintenance",
+      "summary": "Audit README, SPEC, and PRODUCT docs against recent git history for drift and make minimal PR-ready edits. Use to review docs for accuracy after major merges or on a schedule.",
+      "skillPath": "skills/doc-maintenance/SKILL.md",
+      "tags": ["docs", "maintenance", "engineering"],
+      "version": "1.0.0",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/paperclipai/paperclip/tree/master/.agents/skills/doc-maintenance"
+    }
+  ]
+}

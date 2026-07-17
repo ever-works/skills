@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ever-works/skills/blob/main/schema/skill-manifest.schema.json",
+  "title": "Ever Works — Skills Catalog Manifest (manifest.json)",
+  "description": "Index of the Skills catalog. One row per skill folder under skills/. Each skill follows the Agent Skills open standard (agentskills): a directory containing SKILL.md (YAML frontmatter + Markdown body) plus optional references/, scripts/, assets/. The platform reads this manifest from the default branch and resolves each row's skillPath to load the SKILL.md. license + sourceUrl are MANDATORY on every row for provenance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "skills"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Manifest schema version. Bumped only on breaking changes."
+    },
+    "generatedBy": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "How this manifest was produced (e.g. 'manual')."
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 512,
+      "items": { "$ref": "#/$defs/skillRow" }
+    }
+  },
+  "$defs": {
+    "skillRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "path",
+        "name",
+        "summary",
+        "skillPath",
+        "tags",
+        "version",
+        "license",
+        "sourceUrl"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "maxLength": 64,
+          "description": "Unique skill slug, kebab-case. Must equal the skill's folder name and the SKILL.md frontmatter `name`."
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Repo-relative path to the skill folder (e.g. 'skills/skill-creator')."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "description": "Human-readable display name."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 400,
+          "description": "One-line description shown in catalog listings."
+        },
+        "skillPath": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Repo-relative path to the SKILL.md the platform loads (e.g. 'skills/skill-creator/SKILL.md')."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "maxItems": 16
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Catalog-row semver for this skill entry."
+        },
+        "license": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64,
+          "description": "Exact SPDX license identifier of the upstream source (e.g. 'Apache-2.0', 'MIT'). MANDATORY."
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 400,
+          "description": "Canonical URL of the upstream source the skill was seeded from. MANDATORY."
+        },
+        "licensePath": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Repo-relative path to the per-folder LICENSE.txt, when the upstream ships one (Apache-2.0 sources)."
+        }
+      }
+    }
+  }
+}
