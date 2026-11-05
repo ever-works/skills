@@ -45,8 +45,9 @@ have sent you through costs thousands. Use the graph as a map, then confirm in t
 - Use real identifiers in questions (`explain "createInvoice"`, not `explain "the invoice thing"`).
 - Exit code 3 means the name is ambiguous: the candidates are listed, re-run with the one you mean. Exit code 4
   means no node matched: rephrase with an identifier from the code.
-- Then open only the files and lines the answer names. Fall back to search (`git grep`, `rg`) for string
-  literals, configuration values and anything the graph does not model.
+- Then open the files and lines the answer names. Fall back to search (`git grep`, `rg`) for string literals,
+  configuration values, anything the graph does not model, and code changed since the graph was built: in a
+  worktree that uses the primary checkout's graph, that includes every file your branch added or changed.
 
 ## 3. Keep the graph current
 
