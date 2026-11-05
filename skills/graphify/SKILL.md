@@ -59,8 +59,10 @@ your branch's own changes directly.
 ## 4. Build a graph
 
 From the repository root: `graphify update .` (the same command builds the first graph and refreshes it later).
-It writes `graphify-out/graph.json` plus a short `GRAPH_REPORT.md`. Expect seconds for a small repository and up
-to an hour for a large TypeScript monorepo; run it once, early, not per question.
+It writes `graphify-out/graph.json` plus a short `GRAPH_REPORT.md`. Expect seconds to minutes for a small
+repository and up to an hour for a large TypeScript monorepo; run it once, early, not per question. A
+`.graphifyignore` at the root (gitignore syntax) keeps bulky trees that are not code, such as translated docs or
+generated fixtures, out of the graph.
 
 ## 5. Never commit graphify-out/
 
