@@ -30,6 +30,7 @@ SPDX `license` and upstream `sourceUrl`. The row shape is defined in
 | `check-pr` | Check a PR/MR/CL for review comments and failing checks | MIT |
 | `pr-report` | Maintainer-grade PR / contribution reports | MIT |
 | `doc-maintenance` | Audit docs against git history and fix drift via PR | MIT |
+| `evolve-app` | Change an App Work within its App spec's rules, via a pull request that stays open until live | Apache-2.0 |
 
 ## Sources & attribution
 Every skill here is sourced from a permissively-licensed public repo. Each `manifest.json` row records the
@@ -39,6 +40,7 @@ skill's exact SPDX license + source URL; Apache-2.0 skills retain the upstream `
 |----------|----------|---------|
 | skill-creator, mcp-builder, webapp-testing, frontend-design, brand-guidelines, internal-comms, claude-api | [anthropics/skills](https://github.com/anthropics/skills) | Apache-2.0 (per-skill `LICENSE.txt`) |
 | check-pr, pr-report, doc-maintenance | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) `.agents/skills/` | MIT |
+| evolve-app | Original to this catalog, written for the Ever Works platform's App Works ([ever-works/ever-works](https://github.com/ever-works/ever-works)) | Apache-2.0 |
 
 Skill format follows the **Agent Skills** open standard ([agentskills/agentskills](https://github.com/agentskills/agentskills), Apache-2.0):
 one directory per skill, `SKILL.md` = YAML frontmatter + Markdown body, optional `references/` `scripts/` `assets/`.
@@ -57,4 +59,5 @@ proprietary / all-rights-reserved `LICENSE.txt` (frontmatter `license: Proprieta
 which fails this catalog's permissive-only rule: Anthropic's `docx`, `pdf`, `pptx`, `xlsx`,
 `doc-coauthoring`, `canvas-design`, `algorithmic-art`, `slack-gif-creator`, `theme-factory`,
 and `web-artifacts-builder`. All Paperclip-internal skills were also excluded. Only the ten
-permissively-licensed skills above were seeded (no extras).
+permissively-licensed skills above were seeded (no extras); `evolve-app` was added afterwards as an
+original Ever Works skill under this repository's Apache-2.0 license.
