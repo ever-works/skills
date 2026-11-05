@@ -53,7 +53,8 @@ have sent you through costs thousands. Use the graph as a map, then confirm in t
 
 After you change code in a checkout that has its own `graphify-out/`, run `graphify update .` from the repository
 root. It re-extracts the code (AST only, no LLM, no cost) so the next question sees your change. Do not build a
-second graph inside a git worktree: it is slow on a large repository, and the primary checkout's graph covers it.
+second graph inside a git worktree: it is slow on a large repository. Use the primary checkout's graph and search
+your branch's own changes directly.
 
 ## 4. Build a graph
 
