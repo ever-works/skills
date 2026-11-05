@@ -130,6 +130,17 @@
       "version": "1.0.0",
       "license": "Apache-2.0",
       "sourceUrl": "https://github.com/ever-works/skills/tree/main/skills/evolve-app"
+    },
+    {
+      "slug": "graphify",
+      "path": "skills/graphify",
+      "name": "Graphify Code Navigation",
+      "summary": "Navigate a codebase through a local Graphify knowledge graph (query, explain, path, affected) instead of reading raw files, and keep the graph current after code changes. Opt-in: needs the graphify CLI.",
+      "skillPath": "skills/graphify/SKILL.md",
+      "tags": ["code-navigation", "knowledge-graph", "refactoring", "developer-tools"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/ever-works/skills/tree/main/skills/graphify"
     }
   ]
 }
