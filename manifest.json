@@ -119,6 +119,17 @@
       "version": "1.0.0",
       "license": "MIT",
       "sourceUrl": "https://github.com/paperclipai/paperclip/tree/master/.agents/skills/doc-maintenance"
+    },
+    {
+      "slug": "evolve-app",
+      "path": "skills/evolve-app",
+      "name": "Evolve an App",
+      "summary": "Change an App Work the way its own App spec allows: branch per Task, the spec's checks, protected and human-merge paths, and a change that stays open until it is live.",
+      "skillPath": "skills/evolve-app/SKILL.md",
+      "tags": ["app-works", "evolve", "pull-request", "app-spec"],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://github.com/ever-works/skills/tree/main/skills/evolve-app"
     }
   ]
 }
